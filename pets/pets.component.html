@@ -1,0 +1,10 @@
+<h2>Dogs!</h2>
+<ul class="pets">
+    <li *ngFor="let pet of Pets" [class.selected]="pet === selectedPet1" (click)="onSelect(pet)">
+        <span class="badge">{{pet.id}}</span>
+        {{pet.name}} |
+        {{pet.breed}} |
+        <i>{{pet.age}}</i>
+    </li>
+</ul>
+<app-pets-detail [Pet1]="selectedPet1"></app-pets-detail>
